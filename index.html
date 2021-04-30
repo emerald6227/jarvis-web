@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mini jarvis</title>
+    <meta charset="utf-8" />
+    <link href="styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="main-screen">
+        <div class="left-screen">
+            <div class="clock-box">
+                <h1>00:00</h1>
+            </div>
+            <div class="weather-box">
+                <img class="weather-box__img" src="#" />
+                <div>
+                    <span class="weather-box__temp"></span>
+                    <span class="weather-box__title"></span>
+                    <span class="weather-box__wind"></span>
+                    <span class="weather-box__place"></span>
+                </div>
+            </div>
+            <div class="clothes-box">
+                <div class="clothes-box__header">
+                    <i class="fas fa-tshirt"></i>
+                    <span class="clothes-box__title">Daily clothes</span>
+                    <i class="fas fa-tshirt"></i>
+                </div>
+                <div class="clothes-box__temperature">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="clothes-box__temp-text"></span>
+                </div>
+                <div class="clothes-box__clothes-info"></div>
+                <div class="clothes-box__clothes-img"></div>
+            </div>
+        </div>
+
+        <div class="mid-screen">
+            <form class="js-form form">
+                <input tpye="text" placeholder="What is your name"/>
+            </form>
+            <h4 class="js-greetings greetings"></h4>
+            <form class="js-toDoForm">
+                <input type="text" placeholder="Write a to do" />
+            </form>
+            <ul class="js-toDoList"></ul>
+        </div>
+
+        <div class="right-screen"></div>
+    </div>
+
+    <div class="dock">
+
+    </div>
+
+    <img class="bgImage" src="images/ironman-wallpaper4.jpeg" />
+
+    <script src="global.js"></script>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
+    <script src="todo.js"></script>
+    <!-- <script src="bg.js"></script> -->
+    <script await src="weather.js"></script>
+    <script src="clothes.js"></script>
+    <script src="https://kit.fontawesome.com/29ef2d9870.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.right-screen {
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  background-color: rgba(252, 41, 41, 0.5);
+  width: 30%;
+  height: 90vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
