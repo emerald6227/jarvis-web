@@ -1,5 +1,6 @@
-const weatherBox = document.querySelector(".weather-box"),
-    weatherTitle = document.querySelector(".weather-box__title"),
+import {recommandToClothes} from './clothes.js';
+
+const weatherTitle = document.querySelector(".weather-box__title"),
     weatherImg = document.querySelector(".weather-box__img"),
     weatherPlace = document.querySelector(".weather-box__place"),
     weatherTemp = document.querySelector(".weather-box__temp"),
@@ -14,6 +15,7 @@ function getWeather(latitude, longitude) {
         return response.json();
     }).then(function(json) {
         paintWeatherInfo(json);
+        recommandToClothes(json.main.temp);
     });
 }
 
@@ -71,7 +73,6 @@ function loadCoords() {
     } else {
         // get Weather
         const parsedCoords = JSON.parse(loadedCoords);
-        // console.log(parseCoords);
         getWeather(parsedCoords.latitude, parsedCoords.longitude);
     }
 }

@@ -1,20 +1,10 @@
 const clothesTempText = document.querySelector(".clothes-box__temp-text"),
 clothesInfo = document.querySelector(".clothes-box__clothes-info");
 
-const temp = weatherTemp;
 let tempText = "";
-let clothes = [];
-
-function getTemp() {
-    tempText = temp.innerText;
-    const tempNum = tempText.replace(/[^0-9]/g,'');
-    // console.log(tempNum);
-
-    recommandToClothes(tempNum);
-}
+const clothes = [];
 
 function recommandToClothes(tempNum) {
-    console.log(tempNum);
 
     if(tempNum <= -5 ) {
         clothes.push("방한 아웃도어 제품");
@@ -38,18 +28,17 @@ function recommandToClothes(tempNum) {
         clothes.push(`민소매`, `반팔`, `반바지`, `치마`);
     }
 
-    // console.log(clothes);
-    paintClothes();
+    paintClothes(tempNum);
 }
 
-function paintClothes() {
+function paintClothes(tempNum) {
 
+    tempText = `${tempNum}℃`;
     clothesTempText.innerText = `${tempText}에 적합한 옷을 추천합니다.`;
     clothesTempText.style.color = "#4BA8D3";
     clothesTempText.style.fontSize = "16px";
 
     for (const clothing of clothes) {
-        // console.log(clothing);
         const div = document.createElement("div");
         div.classList.add(".clothes-info__item");
         div.style.marginBottom ="10px";
@@ -72,8 +61,4 @@ function paintClothes() {
 
 }
 
-function init() {
-    setTimeout(getTemp, 1000);
-}
-
-init();
+export {recommandToClothes};

@@ -1,8 +1,10 @@
-const form = document.querySelector(".js-form"),
+const form = document.querySelector(".name__form"),
     input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greetings");
+    greetingTitle = document.querySelector(".greetings__title"),
+    greeting = document.querySelector(".greetings__name");
 
 const USER_LS = "currentUser",
+    GREETINGS = "greetings",
     SHOWING_CN = "showing";
 
 // local Stroage에 text 저장
@@ -26,8 +28,11 @@ function askForName() {
 
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
+    greetingTitle.classList.remove(GREETINGS);
+    greetingTitle.classList.add(SHOWING_CN);
+    greeting.classList.remove(GREETINGS);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `Hello ${text}`;
+    greeting.innerText = `'${text}'`;
 }
 
 // name 가져오기

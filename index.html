@@ -38,14 +38,24 @@
         </div>
 
         <div class="mid-screen">
-            <form class="js-form form">
-                <input tpye="text" placeholder="What is your name"/>
-            </form>
-            <h4 class="js-greetings greetings"></h4>
-            <form class="js-toDoForm">
-                <input type="text" placeholder="Write a to do" />
-            </form>
-            <ul class="js-toDoList"></ul>
+            <div class="name-box">
+                <form class="name__form form">
+                    <input tpye="text" placeholder="What's your name?"/>
+                </form>
+                <div class="greetings-box">
+                    <h4 class="greetings__title greetings">Welcome</h4>
+                    <h4 class="greetings__name greetings"></h4>
+                </div>
+            </div>
+
+            <div class="todo-box">
+                <form class="js-toDoForm">
+                    <input type="text" placeholder="Write a to do" />
+                </form>
+                <div class="toDoList-box">
+                    <!-- <ul class="js-toDoList"></ul> -->
+                </div>
+            </div>
         </div>
 
         <div class="right-screen"></div>
@@ -62,8 +72,8 @@
     <script src="greeting.js"></script>
     <script src="todo.js"></script>
     <!-- <script src="bg.js"></script> -->
-    <script await src="weather.js"></script>
-    <script src="clothes.js"></script>
+    <script src="weather.js" type="module"></script>
+    <script src="clothes.js" type="module"></script>
     <script src="https://kit.fontawesome.com/29ef2d9870.js" crossorigin="anonymous"></script>
 </body>
 </html>

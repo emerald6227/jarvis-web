@@ -127,3 +127,31 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* custom */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none;
+  appearance: none;
+  padding: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  text-align: center;
+  color: white;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+button {
+  background: none;
+  border: none;
+}
