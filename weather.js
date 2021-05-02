@@ -14,8 +14,10 @@ function getWeather(latitude, longitude) {
     .then(function(response) {
         return response.json();
     }).then(function(json) {
-        paintWeatherInfo(json);
-        recommandToClothes(json.main.temp);
+        if (json !== null) {
+            paintWeatherInfo(json);
+            recommandToClothes(json.main.temp);
+        }
     });
 }
 
