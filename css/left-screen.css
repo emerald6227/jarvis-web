@@ -27,7 +27,7 @@
 /* weather-screen */
 .weather-box {
   margin-top: 80px;
-  width: 350px;
+  width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
