@@ -119,6 +119,7 @@ function paintToDo(text, complete) {
     completeBtn.classList.add("btn__complete");
     completeBtn.innerHTML = `<i class="far fa-check-square fa-2x"></i>`;
     completeBtn.style.padding = "0";
+    completeBtn.style.color = "#4ba8d3";
     completeBtn.addEventListener("click", completeToDos);
     if (complete === true) {
         completeBtn.style.display = "none";
@@ -131,6 +132,7 @@ function paintToDo(text, complete) {
     restoreBtn.classList.add("btn__restore");
     restoreBtn.innerHTML = `<i class="fas fa-undo-alt fa-2x"></i>`;
     restoreBtn.style.padding = "0";
+    restoreBtn.style.color = "#4ba8d3";
     restoreBtn.addEventListener("click", restoreToDos);
     if (complete === false) {
         restoreBtn.style.display = "none";
@@ -143,6 +145,7 @@ function paintToDo(text, complete) {
     deleteBtn.addEventListener("click", deleteToDos);
     deleteBtn.style.padding = "0";
     deleteBtn.style.marginLeft = "10px";
+    deleteBtn.style.color = "red";
 
     btnDiv.append(completeBtn, restoreBtn, deleteBtn);
     toDo.append(toDoIcon, spanDiv, btnDiv);
