@@ -81,7 +81,6 @@ function paintToDo(text, complete) {
     toDo.classList.add("toDo");
     toDo.style.width = "450px";
     toDo.style.height = "40px";
-    // toDo.style.marginBottom = "10px";
     toDo.style.margin = "10px 0";
     toDo.style.display = "flex";
     toDo.style.alignItems = "center";
@@ -99,14 +98,21 @@ function paintToDo(text, complete) {
     // todo Span
     const spanDiv = document.createElement("div");
     spanDiv.style.width = "370px";
+    spanDiv.style.height = "40px";
     spanDiv.style.marginLeft = "10px";
     spanDiv.style.overflowX = "scroll";
+    spanDiv.style.display = "flex";
+    spanDiv.style.alignItems = "center";
     
     const span = document.createElement("span");
     span.innerText = text;
     span.style.fontSize = "18px";
     span.style.color = "white";
     span.style.fontWeight = 600;
+    span.style.height = "30px";
+    span.style.width = "300px";
+    span.style.display = "flex";
+    span.style.alignItems = "center";
 
     spanDiv.append(span);
 
@@ -119,7 +125,8 @@ function paintToDo(text, complete) {
     completeBtn.classList.add("btn__complete");
     completeBtn.innerHTML = `<i class="far fa-check-square fa-2x"></i>`;
     completeBtn.style.padding = "0";
-    completeBtn.style.color = "#4ba8d3";
+    // completeBtn.style.color = "#4ba8d3";
+    completeBtn.style.color = "yellowgreen";
     completeBtn.addEventListener("click", completeToDos);
     if (complete === true) {
         completeBtn.style.display = "none";
@@ -132,7 +139,7 @@ function paintToDo(text, complete) {
     restoreBtn.classList.add("btn__restore");
     restoreBtn.innerHTML = `<i class="fas fa-undo-alt fa-2x"></i>`;
     restoreBtn.style.padding = "0";
-    restoreBtn.style.color = "#4ba8d3";
+    restoreBtn.style.color = "yellowgreen";
     restoreBtn.addEventListener("click", restoreToDos);
     if (complete === false) {
         restoreBtn.style.display = "none";

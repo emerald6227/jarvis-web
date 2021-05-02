@@ -36,11 +36,12 @@
   width: 350px;
   height: 500px;
   margin-top: 50px;
+  padding: 0 20px;
   overflow: scroll;
 }
 
 .news-box__info {
-  width: 230px;
+  width: 260px;
   height: 30px;
   margin-top: 20px;
   display: flex;

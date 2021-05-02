@@ -7,11 +7,12 @@ const newsUrl = `https://newsapi.org/v2/top-headlines?country=kr&category=techno
 
 function paintNewsList(json) {
     const newses = json.articles;
+    console.log(newses);
     
     for(let i = 0; i < 10; i++) {
         const title = newses[i].title;
-        const url = newses[i].url;
-        const urlImage = newses[i].urlToImage;
+        const url = newses[i].link;
+        const urlImage = newses[i].media;
         makeNewsHtml(title, url, urlImage);
     }
 
@@ -21,6 +22,7 @@ function makeNewsHtml(title, url, urlImage) {
     // make html
     const newsLink = document.createElement("a");
     newsLink.href = url;
+    newsLink.style.width = "350px";
     newsLink.style.marginBottom = "20px";
     const newsDiv = document.createElement("div");
     newsDiv.style.display = "flex";
@@ -50,11 +52,38 @@ function makeNewsHtml(title, url, urlImage) {
 
 function init() {
 
-    fetch(newsUrl).then(function(response) {
+    const query = `apple`;
+    const encodeQuery = encodeURI(query);
+    // console.log(encodeQuery);
+
+    fetch(`https://free-news.p.rapidapi.com/v1/search?q=${encodeQuery}&lang=en`, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "78703eb276msh50c7d5d50042338p17b171jsn674f786a647e",
+            "x-rapidapi-host": "free-news.p.rapidapi.com"
+        }
+    })
+    .then(response => {
+        // console.log(response);
         return response.json();
-    }).then(function(json) {
+    }).then(json => {
+        // console.log(json);
         paintNewsList(json);
+    })
+    .catch(err => {
+        console.error(err);
     });
+
+
+
+    // fetch(newsUrl).then(function(response) {
+    //     console.log(response);
+    //     return response.json();
+    // }).then(function(json) {
+    //     paintNewsList(json);
+    // }).catch(function(error) {
+    //     console.log(`news api error: ${error}`);
+    // });
 }
 
 init();
