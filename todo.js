@@ -100,9 +100,11 @@ function paintToDo(text, complete) {
     spanDiv.style.width = "370px";
     spanDiv.style.height = "40px";
     spanDiv.style.marginLeft = "10px";
-    spanDiv.style.overflowX = "scroll";
     spanDiv.style.display = "flex";
     spanDiv.style.alignItems = "center";
+    spanDiv.style.overflowX = "scroll";
+    spanDiv.style.overflowY = "hidden;"
+    spanDiv.style.scrollbarWidth = "none";
     
     const span = document.createElement("span");
     span.innerText = text;
