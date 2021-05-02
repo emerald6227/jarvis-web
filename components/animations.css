@@ -1,3 +1,7 @@
 .hover__btn {
   transform: scale(1.2);
 }
+
+.news__div {
+  transform: scale(1.1);
+}

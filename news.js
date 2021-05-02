@@ -18,6 +18,17 @@ function makeNewsHtml(title, url, urlImage) {
     newsLink.href = url;
     newsLink.style.width = "350px";
     newsLink.style.marginBottom = "20px";
+    // animation
+    newsLink.style.transition = "all 0.3s ease";
+    newsLink.onmouseenter = function() {
+        this.classList.add("news__div");
+    };
+    newsLink.onmouseleave = function() {
+        setTimeout(function() {
+            this.classList.remove("news__div");
+        }.bind(this, 300));
+    }
+
     const newsDiv = document.createElement("div");
     newsDiv.style.display = "flex";
     newsDiv.style.alignItems = "center";
