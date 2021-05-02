@@ -1,7 +1,8 @@
 const form = document.querySelector(".name__form"),
     input = form.querySelector("input"),
     greetingTitle = document.querySelector(".greetings__title"),
-    greeting = document.querySelector(".greetings__name");
+    greeting = document.querySelector(".greetings__name"),
+    infoBoxName = document.querySelector(".info-box__name");
 
 const USER_LS = "currentUser",
     GREETINGS = "greetings",
@@ -32,6 +33,7 @@ function paintGreeting(text) {
     greetingTitle.classList.add(SHOWING_CN);
     greeting.classList.remove(GREETINGS);
     greeting.classList.add(SHOWING_CN);
+    infoBoxName.classList.add(GREETINGS);
     greeting.innerText = `'${text}'`;
 }
 

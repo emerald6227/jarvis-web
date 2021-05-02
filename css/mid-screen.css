@@ -2,7 +2,7 @@
   /* background-color: rgba(0, 0, 0, 0.5); */
   background-color: rgba(72, 128, 248, 0.5);
   width: 40%;
-  height: 90vh;
+  height: 100vh;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
@@ -17,6 +17,7 @@
   height: 100px;
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -24,6 +25,12 @@
 .name__form input {
   width: 400px;
   height: 30px;
+}
+
+.info-box__name {
+  width: 200px;
+  height: 23px;
+  margin-top: 10px;
 }
 
 .greetings-box {
@@ -59,6 +66,11 @@
 .js-toDoForm input {
   width: 400px;
   height: 30px;
+}
+
+.info-box__todo {
+  width: 210px;
+  margin-top: 30px;
 }
 
 .toDoList-box {

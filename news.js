@@ -1,13 +1,7 @@
 const newsBoxList = document.querySelector(".news-box__list");
 
-// newsapi.org
-const apiKey = "365f942a0408494e80779112a6187395";
-
-const newsUrl = `https://newsapi.org/v2/top-headlines?country=kr&category=technology&apiKey=${apiKey}`;
-
 function paintNewsList(json) {
     const newses = json.articles;
-    console.log(newses);
     
     for(let i = 0; i < 10; i++) {
         const title = newses[i].title;
@@ -28,6 +22,8 @@ function makeNewsHtml(title, url, urlImage) {
     newsDiv.style.display = "flex";
     newsDiv.style.alignItems = "center";
 
+    const newsImgDiv = document.createElement("div");
+
     const newsImg = document.createElement("img");
     newsImg.src = urlImage;
     newsImg.style.width = "100px";
@@ -42,8 +38,9 @@ function makeNewsHtml(title, url, urlImage) {
     const newsTitle = document.createElement("span");
     newsTitle.innerText = title;
 
+    newsImgDiv.append(newsImg);
     newsTitleDiv.append(newsTitle);
-    newsDiv.append(newsImg, newsTitleDiv);
+    newsDiv.append(newsImgDiv, newsTitleDiv);
     newsLink.append(newsDiv);
 
     newsBoxList.append(newsLink);
@@ -52,9 +49,8 @@ function makeNewsHtml(title, url, urlImage) {
 
 function init() {
 
-    const query = `apple`;
+    const query = `marvel comics`;
     const encodeQuery = encodeURI(query);
-    // console.log(encodeQuery);
 
     fetch(`https://free-news.p.rapidapi.com/v1/search?q=${encodeQuery}&lang=en`, {
         "method": "GET",
@@ -64,26 +60,14 @@ function init() {
         }
     })
     .then(response => {
-        // console.log(response);
         return response.json();
     }).then(json => {
-        // console.log(json);
         paintNewsList(json);
     })
     .catch(err => {
         console.error(err);
     });
 
-
-
-    // fetch(newsUrl).then(function(response) {
-    //     console.log(response);
-    //     return response.json();
-    // }).then(function(json) {
-    //     paintNewsList(json);
-    // }).catch(function(error) {
-    //     console.log(`news api error: ${error}`);
-    // });
 }
 
 init();

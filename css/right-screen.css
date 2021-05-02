@@ -3,7 +3,7 @@
   background-color: rgba(252, 41, 41, 0.5);
   /* background-color: rgba(130, 28, 27, 0.5); */
   width: 30%;
-  height: 90vh;
+  height: 100vh;
   padding: 0 20px;
   box-sizing: border-box;
   display: flex;
@@ -13,7 +13,7 @@
 }
 
 .news-box {
-  margin-top: 100px;
+  margin-top: 30px;
   height: 800px;
   width: 400px;
   display: flex;
@@ -25,6 +25,7 @@
 .news-box h1 {
   font-size: 70px;
   font-weight: 700;
+  width: 300px;
   color: white;
 }
 
@@ -35,31 +36,12 @@
   align-items: center;
   width: 350px;
   height: 500px;
-  margin-top: 50px;
+  margin-top: 40px;
   padding: 0 20px;
   overflow: scroll;
 }
 
-.news-box__info {
-  width: 260px;
-  height: 30px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 30px;
-}
-
-.news-box__info i {
-  margin-right: 7px;
-  color: #4ba8d3;
-}
-
-.news-box__info-text {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 5px;
-  color: #4ba8d3;
+.info-box__news {
+  width: 230px;
+  margin-top: 50px;
 }

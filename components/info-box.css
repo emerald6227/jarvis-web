@@ -1,0 +1,22 @@
+.info-box {
+  width: 260px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+}
+
+.info-box i {
+  margin-right: 7px;
+  color: #4ba8d3;
+}
+
+.info-box__text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+  color: #4ba8d3;
+}

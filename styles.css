@@ -1,10 +1,15 @@
 @import "reset.css";
 @import "variables.css";
 
+/* components */
+@import "components/info-box.css";
+@import "components/animations.css";
+
 /* screen */
 @import "css/left-screen.css";
 @import "css/mid-screen.css";
 @import "css/right-screen.css";
+@import "css/dock-screen.css";
 
 body {
   background-color: #ecf0f1;
@@ -52,4 +57,36 @@ body {
   to {
     opacity: 1;
   }
+}
+
+@keyframes loadingAnimation {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loading-screen {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  animation: loadingAnimation 2.5s ease forwards;
+}
+
+.loading-screen img {
+  opacity: 1;
+  height: 100%;
 }

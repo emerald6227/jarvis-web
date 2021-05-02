@@ -1,0 +1,81 @@
+.dock-screen {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.dock-box {
+  width: 70%;
+  height: 8vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dock-box__images {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dock-box__images a {
+  transition: transform 0.3s ease;
+}
+
+.dock-box__images a:hover {
+  transform: scale(1.3);
+}
+
+.dock-box__images img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0.8;
+  margin: 0 7px;
+}
+
+.dock-box__main-logo {
+  width: 10%;
+}
+
+@keyframes mainLogoAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  75% {
+    transform: rotateY(-30deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.dock-box__main-logo img {
+  width: 100px;
+  height: 100px;
+  animation: mainLogoAnimation 5s linear infinite;
+}
+
+.dock-box__player {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dock-box__player audio {
+  width: 80%;
+}

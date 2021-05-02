@@ -125,7 +125,6 @@ function paintToDo(text, complete) {
     completeBtn.classList.add("btn__complete");
     completeBtn.innerHTML = `<i class="far fa-check-square fa-2x"></i>`;
     completeBtn.style.padding = "0";
-    // completeBtn.style.color = "#4ba8d3";
     completeBtn.style.color = "yellowgreen";
     completeBtn.addEventListener("click", completeToDos);
     if (complete === true) {
@@ -133,6 +132,16 @@ function paintToDo(text, complete) {
         span.style.textDecoration = "line-through";
         span.style.textDecorationColor = "black";
         span.style.textDecorationThickness = "3px";
+    }
+    // animation
+    completeBtn.style.transition = "all 0.3s ease";
+    completeBtn.onmouseenter = function() {
+        this.classList.add("hover__btn");
+    };
+    completeBtn.onmouseleave = function() {
+        setTimeout(function() {
+            this.classList.remove("hover__btn");
+        }.bind(this, 300));
     }
 
     const restoreBtn = document.createElement("button");
@@ -145,6 +154,16 @@ function paintToDo(text, complete) {
         restoreBtn.style.display = "none";
         span.style.textDecoration = "none";
     }
+    // animation
+    restoreBtn.style.transition = "all 0.3s ease";
+    restoreBtn.onmouseenter = function() {
+        this.classList.add("hover__btn");
+    };
+    restoreBtn.onmouseleave = function() {
+        setTimeout(function() {
+            this.classList.remove("hover__btn");
+        }.bind(this, 300));
+    }
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("btn_delete");
@@ -153,6 +172,17 @@ function paintToDo(text, complete) {
     deleteBtn.style.padding = "0";
     deleteBtn.style.marginLeft = "10px";
     deleteBtn.style.color = "red";
+    // animation
+    deleteBtn.style.transition = "all 0.3s ease";
+    deleteBtn.onmouseenter = function() {
+        this.classList.add("hover__btn");
+    };
+    deleteBtn.onmouseleave = function() {
+        setTimeout(function() {
+            this.classList.remove("hover__btn");
+        }.bind(this, 300));
+    }
+    
 
     btnDiv.append(completeBtn, restoreBtn, deleteBtn);
     toDo.append(toDoIcon, spanDiv, btnDiv);

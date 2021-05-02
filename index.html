@@ -42,6 +42,10 @@
                 <form class="name__form form">
                     <input tpye="text" placeholder="What's your name?"/>
                 </form>
+                <div class="info-box info-box__name">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="info-box__text">이름을 작성해주세요.</span>
+                </div>
                 <div class="greetings-box">
                     <h4 class="greetings__title greetings">Welcome</h4>
                     <h4 class="greetings__name greetings"></h4>
@@ -52,28 +56,60 @@
                 <form class="js-toDoForm">
                     <input type="text" placeholder="Write a to do" />
                 </form>
+                <div class="info-box info-box__todo">
+                    <i class="fas fa-info-circle"></i>
+                    <span class="info-box__text">할일 목록을 작성하세요.</span>
+                </div>
                 <div class="toDoList-box"></div>
             </div>
         </div>
 
         <div class="right-screen">
             <div class="news-box">
-                <h1>Apple News</h1>
-                <div class="news-box__info">
+                <h1>MARVEL News</h1>
+                <div class="info-box info-box__news">
                     <i class="fas fa-info-circle"></i>
-                    <span class="news-box__info-text">최근 Apple News를 추천합니다.</span>
+                    <span class="info-box__text">추천 MARVEL 뉴스입니다.</span>
                 </div>
                 <div class="news-box__list"></div>
             </div>
-
         </div>
     </div>
 
-    <div class="dock">
-
+    <div class="dock-screen">
+        <div class="dock-box">
+            <div class="dock-box__images">
+                <a href="https://www.google.co.kr" target="_blank">
+                    <img src="images/google-icon.png" />
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube-icon.png" />
+                </a>
+                <a href="https://www.naver.com" target="_blank">
+                    <img src="images/naver-icon.png" />
+                </a>
+                <a href="https://github.com/emerald6227/jarvis-web" target="_blank">
+                    <img src="images/github-icon.png" />
+                </a>
+                <a href="https://blog.naver.com/emerald6227" target="_blank">
+                    <img src="images/raven-profile.png" />
+                </a>
+            </div>
+            <div class="dock-box__main-logo">
+                <img src="images/marvel-icon.webp" />
+            </div>
+            <div class="dock-box__player">
+                <audio controls loop src="audio/avengers-theme.mp3">audio</audio>
+            </div>
+        </div>
     </div>
 
     <img class="bgImage" src="images/ironman-wallpaper.jpeg" />
+
+    <!-- load Screen -->
+    <div class="loading-screen">
+        <img src="images/ironman-break.jpeg" />
+    </div>
 
     <script src="global.js"></script>
     <script src="clock.js"></script>
