@@ -37,6 +37,7 @@ function paintClothes(tempNum) {
     clothesTempText.innerText = `${tempText}에 적합한 옷을 추천합니다.`;
     clothesTempText.style.color = "#4BA8D3";
     clothesTempText.style.fontSize = "16px";
+    clothesTempText.style.fontWeight = "600";
 
     for (const clothing of clothes) {
         const div = document.createElement("div");

@@ -19,4 +19,6 @@
   flex-direction: column;
   padding: 5px;
   color: #4ba8d3;
+  font-size: 16px;
+  font-weight: 600;
 }
