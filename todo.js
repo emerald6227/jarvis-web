@@ -77,7 +77,7 @@ function saveToDos() {
 
 function paintToDo(text, complete) {
     // div
-    const toDo = document.createElement("div"); // 큰박스
+    const toDo = document.createElement("div");
     toDo.classList.add("toDo");
     toDo.style.width = "450px";
     toDo.style.height = "40px";
