@@ -18,6 +18,7 @@ function makeNewsHtml(title, url, urlImage) {
     newsLink.href = url;
     newsLink.style.width = "350px";
     newsLink.style.marginBottom = "20px";
+    newsLink.target = "_blank";
     // animation
     newsLink.style.transition = "all 0.3s ease";
     newsLink.onmouseenter = function() {

@@ -128,6 +128,7 @@ function paintToDo(text, complete) {
     completeBtn.innerHTML = `<i class="far fa-check-square fa-2x"></i>`;
     completeBtn.style.padding = "0";
     completeBtn.style.color = "yellowgreen";
+    completeBtn.style.cursor = "pointer";
     completeBtn.addEventListener("click", completeToDos);
     if (complete === true) {
         completeBtn.style.display = "none";
@@ -151,6 +152,7 @@ function paintToDo(text, complete) {
     restoreBtn.innerHTML = `<i class="fas fa-undo-alt fa-2x"></i>`;
     restoreBtn.style.padding = "0";
     restoreBtn.style.color = "yellowgreen";
+    restoreBtn.style.cursor = "pointer";
     restoreBtn.addEventListener("click", restoreToDos);
     if (complete === false) {
         restoreBtn.style.display = "none";
@@ -174,6 +176,7 @@ function paintToDo(text, complete) {
     deleteBtn.style.padding = "0";
     deleteBtn.style.marginLeft = "10px";
     deleteBtn.style.color = "red";
+    deleteBtn.style.cursor = "pointer";
     // animation
     deleteBtn.style.transition = "all 0.3s ease";
     deleteBtn.onmouseenter = function() {
