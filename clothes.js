@@ -10,19 +10,19 @@ function recommandToClothes(tempNum) {
         clothes.push("방한 아웃도어 제품");
     } else if (tempNum <= 0) {
         clothes.push(`모자달린 두꺼운 패딩`, `스웨터`, `귀마개`, `부츠`);
-    } else if (tempNum <= 4) {
+    } else if (tempNum <= 4.9) {
         clothes.push(`패딩`, `두꺼운 코트`, `목도리`, `기모 제품`);
-    } else if (tempNum >= 5 && tempNum <= 8) {
+    } else if (tempNum >= 5 && tempNum <= 8.9) {
         clothes.push(`코트`, `히트텍`, `니트`, `청바지`, `레깅스`);
-    } else if (tempNum >= 9 && tempNum <= 11) {
+    } else if (tempNum >= 9 && tempNum <= 11.9) {
         clothes.push(`재킷`, `트렌치코트`, `야상`, `니트`, `스타킹`, `청바지`, `면바지`);
-    } else if (tempNum >= 12 && tempNum <= 16) {
+    } else if (tempNum >= 12 && tempNum <= 16.9) {
         clothes.push(`코트`, `가디건`, `야상`, `맨투맨`, `니트`, `스타킹`, `청바지`, `면바지`);
-    } else if (tempNum >= 17 && tempNum <= 19) {
+    } else if (tempNum >= 17 && tempNum <= 19.9) {
         clothes.push(`얇은 니트`, `가디건`, `맨투맨`, `얇은 재킷`, `면바지`, `청바지`);
-    } else if (tempNum >= 20 && tempNum <= 22) {
+    } else if (tempNum >= 20 && tempNum <= 22.9) {
         clothes.push(`얇은 가디건`, `긴팔티`, `면바지`, `청바지`);
-    } else if (tempNum >= 23 && tempNum <= 27) {
+    } else if (tempNum >= 23 && tempNum <= 27.9) {
         clothes.push(`반팔`, `얇은 셔츠`, `반바지`, `면바지`);
     } else if (tempNum >= 28) {
         clothes.push(`민소매`, `반팔`, `반바지`, `치마`);
