@@ -137,7 +137,7 @@ function paintToDo(text, complete) {
         span.style.textDecorationThickness = "3px";
     }
     // animation
-    completeBtn.style.transition = "all 0.3s ease";
+    completeBtn.style.transition = "all 0.1s ease";
     completeBtn.onmouseenter = function() {
         this.classList.add("hover__btn");
     };
@@ -159,7 +159,7 @@ function paintToDo(text, complete) {
         span.style.textDecoration = "none";
     }
     // animation
-    restoreBtn.style.transition = "all 0.3s ease";
+    restoreBtn.style.transition = "all 0.1s ease";
     restoreBtn.onmouseenter = function() {
         this.classList.add("hover__btn");
     };
@@ -178,7 +178,7 @@ function paintToDo(text, complete) {
     deleteBtn.style.color = "red";
     deleteBtn.style.cursor = "pointer";
     // animation
-    deleteBtn.style.transition = "all 0.3s ease";
+    deleteBtn.style.transition = "all 0.1s ease";
     deleteBtn.onmouseenter = function() {
         this.classList.add("hover__btn");
     };
