@@ -28,8 +28,8 @@ function paintWeatherInfo(json) {
     const place = json.name;
     const weatherName = json.weather[0].main;
     const weatherDesc = json.weather[0].description;
-    const temperature = json.main.temp;
-    const windSpeed = json.wind.speed;
+    const temperature = Math.floor(json.main.temp);
+    const windSpeed = Math.floor(json.wind.speed);
     const icon = json.weather[0].icon;
     const iconUrl = `http://openweathermap.org/img/wn/${icon}.png`;
 

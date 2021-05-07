@@ -5,6 +5,7 @@ let tempText = "";
 const clothes = [];
 
 function recommandToClothes(tempNum) {
+    tempNum = Math.floor(tempNum);
 
     if(tempNum <= -5 ) {
         clothes.push("방한 아웃도어 제품");
