@@ -116,7 +116,7 @@ body {
   color: rgba(252, 41, 41, 1);
 }
 
-@media screen and (min-width: 1200px) and (min-height: 800px) {
+@media screen and (min-width: 1200px) and (min-height: 750px) {
   .no-pc {
     display: none;
     visibility: hidden;
